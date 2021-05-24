@@ -30,7 +30,13 @@ public class HomeController {
     }
 
     @GetMapping("erhverv")
-    public String erhvervh() {
+    public String erhverv() {
         return "erhverv";
     }
+
+    @GetMapping("butikker")
+    public String butikker() {
+        return "butikker";
+    }
 }
+
