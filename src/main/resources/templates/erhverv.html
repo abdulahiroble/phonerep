@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Phonerep</title>
+</head>
+<body>
+
+    <div class="flex flex-row justify-between p-5 uppercase text-lg">
+        
+        <div class="grid grid-cols-1 place-items-center w-64">
+            <img th:src="@{img/lillelogo.png}" src="../static/img/lillelogo.png" alt="">
+        </div>
+
+
+        <div class="grid grid-cols-5 gap-2 place-items-center">
+            <div>Reparationer</div>
+            <div>Butikker</div>
+            <div>Tilbehør</div>
+            <div>Erhverv</div>
+            <div>Kontakt os</div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 place-items-center">  
+            <div>Bestil tid</div>
+            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 11.839844 2.988281 C 11.070313 2.925781 10.214844 3.148438 9.425781 3.703125 C 8.730469 4.1875 7.230469 5.378906 5.828125 6.726563 C 5.128906 7.398438 4.460938 8.097656 3.945313 8.785156 C 3.425781 9.472656 2.972656 10.101563 3 11.015625 C 3.027344 11.835938 3.109375 14.261719 4.855469 17.980469 C 6.601563 21.695313 9.988281 26.792969 16.59375 33.402344 C 23.203125 40.011719 28.300781 43.398438 32.015625 45.144531 C 35.730469 46.890625 38.160156 46.972656 38.980469 47 C 39.890625 47.027344 40.519531 46.574219 41.207031 46.054688 C 41.894531 45.535156 42.59375 44.871094 43.265625 44.171875 C 44.609375 42.769531 45.800781 41.269531 46.285156 40.574219 C 47.390625 39 47.207031 37.140625 45.976563 36.277344 C 45.203125 35.734375 38.089844 31 37.019531 30.34375 C 35.933594 29.679688 34.683594 29.980469 33.566406 30.570313 C 32.6875 31.035156 30.308594 32.398438 29.628906 32.789063 C 29.117188 32.464844 27.175781 31.171875 23 26.996094 C 18.820313 22.820313 17.53125 20.878906 17.207031 20.367188 C 17.597656 19.6875 18.957031 17.320313 19.425781 16.425781 C 20.011719 15.3125 20.339844 14.050781 19.640625 12.957031 C 19.347656 12.492188 18.015625 10.464844 16.671875 8.429688 C 15.324219 6.394531 14.046875 4.464844 13.714844 4.003906 L 13.714844 4 C 13.28125 3.402344 12.605469 3.050781 11.839844 2.988281 Z M 11.65625 5.03125 C 11.929688 5.066406 12.09375 5.175781 12.09375 5.175781 C 12.253906 5.398438 13.65625 7.5 15 9.53125 C 16.34375 11.566406 17.714844 13.652344 17.953125 14.03125 C 17.992188 14.089844 18.046875 14.753906 17.65625 15.492188 L 17.65625 15.496094 C 17.214844 16.335938 15.15625 19.933594 15.15625 19.933594 L 14.871094 20.4375 L 15.164063 20.9375 C 15.164063 20.9375 16.699219 23.527344 21.582031 28.410156 C 26.46875 33.292969 29.058594 34.832031 29.058594 34.832031 L 29.558594 35.125 L 30.0625 34.839844 C 30.0625 34.839844 33.652344 32.785156 34.5 32.339844 C 35.238281 31.953125 35.902344 32.003906 35.980469 32.050781 C 36.671875 32.476563 44.355469 37.582031 44.828125 37.914063 C 44.84375 37.925781 45.261719 38.558594 44.652344 39.425781 L 44.648438 39.425781 C 44.28125 39.953125 43.078125 41.480469 41.824219 42.785156 C 41.195313 43.4375 40.550781 44.046875 40.003906 44.457031 C 39.457031 44.867188 38.96875 44.996094 39.046875 45 C 38.195313 44.972656 36.316406 44.953125 32.867188 43.332031 C 29.417969 41.714844 24.496094 38.476563 18.007813 31.984375 C 11.523438 25.5 8.285156 20.578125 6.664063 17.125 C 5.046875 13.675781 5.027344 11.796875 5 10.949219 C 5.003906 11.027344 5.132813 10.535156 5.542969 9.988281 C 5.953125 9.441406 6.558594 8.792969 7.210938 8.164063 C 8.519531 6.910156 10.042969 5.707031 10.570313 5.339844 L 10.570313 5.34375 C 11.003906 5.039063 11.382813 5 11.65625 5.03125 Z"/></svg>
+            <div>71 71 71 02</div>
+        </div>  
+
+    </div>
+
+    </br>
+    <h1 style="font-size: 35px; margin-left: 50px; font-weight: bold;"> Phone-Rep Erhverv</h1> <br/> <br/>
+
+    <div class="erhvervdiv">
+        Få en favorabel serviceaftale med MacVision – og slip for bøvlet med at finde en reparatør, når du har brug for en. <br/>
+        Du kan samle alle dine reparationer ét sted, hvor du er garanteret den samme og sikre service. <br/>
+        Vi reparerer dine Apple produkter og Samsung smartphones fra dag til dag – og med garanti.
+    </div> <br/> <br/>
+
+    <div class="erhvervdiv" style="display: flex; justify-content: space-between">
+        <div style="margin-top: 20px">
+        <h3 style="font-size: 20px; color: #8DC63F; font-weight: bold;">Uddannede teknikere</h3>
+        <div style="color: dimgray">Kompetente og erfarne medarbejdere sikrer reparation af et hvilket som helst Apple produkt, men også Samsung smartphones.</div> <br/> <br/>
+
+        <h3 style="font-size: 20px; color: #8DC63F; font-weight: bold;">12 måneders garanti</h3>
+        <div style="color: dimgray">Som erhvervskunde er du sikret 12 måneders garanti på alle reparationer foretaget på vores værksted af vores uddannede teknikere.</div> <br/> <br/>
+
+        <h3 style="font-size: 20px; color: #8DC63F; font-weight: bold;">ESD sikret værksted</h3>
+        <div style="color: dimgray">Som autoriseret værksted, er det en selvfølge at vores værksted har alle de rigtige faciliteter, som ESD gulve, borde, stole papirkurve osv.</div> <br/> <br/>
+
+        <h3 style="font-size: 20px; color: #8DC63F; font-weight: bold;">Gratis lånetelefon</h3>
+        <div style="color: dimgray">For at mindske dine gener og minimere din nedetid tilbyder vi en gratis lånetelefon, mens din egen telefon bliver repareret på vores værksted.</div> <br/> <br/>
+
+        <h3 style="font-size: 20px; color: #8DC63F; font-weight: bold;">Op til 20 % rabat på reparationer</h3>
+        <div style="color: dimgray">Med en erhvervsaftale hos MacVision får du op til 20 % rabat på reparationer af dine Apple produkter og Samsung smartphones.</div> <br/> <br/>
+        </div>
+
+        <div style="margin-top: -100px">
+            <img th:src="@{img/29-290122_samsung-cell-phone-png-samsung-galaxy-s8-plus.png}" src="../static/img/29-290122_samsung-cell-phone-png-samsung-galaxy-s8-plus" alt="">
+        </div>
+
+    </div> <br/> <br/>
+
+
+    <div class="erhvervdiv">
+        <div style="margin-top: -350px;">
+        <h1 style="font-size: 35px; font-weight: bold;"> Serviceaftale</h1> <br/> <br/>
+        <div style="display: flex;"> <svg style="padding-right: 6px;" fill="#8DC63F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25px" height="25px"><path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 20.44 46.660281 16.189328 44.363281 12.611328 L 42.994141 14.228516 C 44.889141 17.382516 46 21.06 46 25 C 46 36.579 36.579 46 25 46 C 13.421 46 4 36.579 4 25 C 4 13.421 13.421 4 25 4 C 30.443 4 35.393906 6.0997656 39.128906 9.5097656 L 40.4375 7.9648438 C 36.3525 4.2598437 30.935 2 25 2 z M 43.236328 7.7539062 L 23.914062 30.554688 L 15.78125 22.96875 L 14.417969 24.431641 L 24.083984 33.447266 L 44.763672 9.046875 L 43.236328 7.7539062 z"/></svg> <div style="color: dimgray">Ekspres reparationer, så din nedetid bliver kortest mulig.</div> </div> <br/>
+        <div style="display: flex;"> <svg style="padding-right: 6px;" fill="#8DC63F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25px" height="25px"><path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 20.44 46.660281 16.189328 44.363281 12.611328 L 42.994141 14.228516 C 44.889141 17.382516 46 21.06 46 25 C 46 36.579 36.579 46 25 46 C 13.421 46 4 36.579 4 25 C 4 13.421 13.421 4 25 4 C 30.443 4 35.393906 6.0997656 39.128906 9.5097656 L 40.4375 7.9648438 C 36.3525 4.2598437 30.935 2 25 2 z M 43.236328 7.7539062 L 23.914062 30.554688 L 15.78125 22.96875 L 14.417969 24.431641 L 24.083984 33.447266 L 44.763672 9.046875 L 43.236328 7.7539062 z"/></svg> <div style="color: dimgray">Muligheden for reparation på arbejdspladsen i krisesituationer.</div> </div> <br/>
+        <div style="display: flex;"> <svg style="padding-right: 6px;" fill="#8DC63F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25px" height="25px"><path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 20.44 46.660281 16.189328 44.363281 12.611328 L 42.994141 14.228516 C 44.889141 17.382516 46 21.06 46 25 C 46 36.579 36.579 46 25 46 C 13.421 46 4 36.579 4 25 C 4 13.421 13.421 4 25 4 C 30.443 4 35.393906 6.0997656 39.128906 9.5097656 L 40.4375 7.9648438 C 36.3525 4.2598437 30.935 2 25 2 z M 43.236328 7.7539062 L 23.914062 30.554688 L 15.78125 22.96875 L 14.417969 24.431641 L 24.083984 33.447266 L 44.763672 9.046875 L 43.236328 7.7539062 z"/></svg> <div style="color: dimgray">Kreditaftale, så du sparer tid og ressourcer på betalingen.</div> </div> <br/>
+        <div style="display: flex;"> <svg style="padding-right: 6px;" fill="#8DC63F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25px" height="25px"><path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 20.44 46.660281 16.189328 44.363281 12.611328 L 42.994141 14.228516 C 44.889141 17.382516 46 21.06 46 25 C 46 36.579 36.579 46 25 46 C 13.421 46 4 36.579 4 25 C 4 13.421 13.421 4 25 4 C 30.443 4 35.393906 6.0997656 39.128906 9.5097656 L 40.4375 7.9648438 C 36.3525 4.2598437 30.935 2 25 2 z M 43.236328 7.7539062 L 23.914062 30.554688 L 15.78125 22.96875 L 14.417969 24.431641 L 24.083984 33.447266 L 44.763672 9.046875 L 43.236328 7.7539062 z"/></svg> <div style="color: dimgray">Den garanteret bedste service på markedet.</div> </div> <br/>
+        <div style="display: flex;"> <svg style="padding-right: 6px;" fill="#8DC63F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25px" height="25px"><path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 20.44 46.660281 16.189328 44.363281 12.611328 L 42.994141 14.228516 C 44.889141 17.382516 46 21.06 46 25 C 46 36.579 36.579 46 25 46 C 13.421 46 4 36.579 4 25 C 4 13.421 13.421 4 25 4 C 30.443 4 35.393906 6.0997656 39.128906 9.5097656 L 40.4375 7.9648438 C 36.3525 4.2598437 30.935 2 25 2 z M 43.236328 7.7539062 L 23.914062 30.554688 L 15.78125 22.96875 L 14.417969 24.431641 L 24.083984 33.447266 L 44.763672 9.046875 L 43.236328 7.7539062 z"/></svg> <div style="color: dimgray">Support og opsætning af alle former for Apple produkter.</div> </div> <br/>
+        <div style="display: flex;"> <svg style="padding-right: 6px;" fill="#8DC63F" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="25px" height="25px"><path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 20.44 46.660281 16.189328 44.363281 12.611328 L 42.994141 14.228516 C 44.889141 17.382516 46 21.06 46 25 C 46 36.579 36.579 46 25 46 C 13.421 46 4 36.579 4 25 C 4 13.421 13.421 4 25 4 C 30.443 4 35.393906 6.0997656 39.128906 9.5097656 L 40.4375 7.9648438 C 36.3525 4.2598437 30.935 2 25 2 z M 43.236328 7.7539062 L 23.914062 30.554688 L 15.78125 22.96875 L 14.417969 24.431641 L 24.083984 33.447266 L 44.763672 9.046875 L 43.236328 7.7539062 z"/></svg> <div style="color: dimgray">Fast kontaktperson, som er ansvarlig for netop din skræddersyede løsning.</div> </div> <br/>
+        </div>
+    </div>
+
+
+
+
+    <div style="margin-top: 100px;">
+    <h1 style="font-size: 35px; font-weight: bold; text-align: center"> Ansøg nu</h1> <br/> <br/>
+    <form class="form" >
+
+        <label class="formlabel" >Navn</label><br />
+        <input class="inputform" type="text" /><br /><br />
+
+        <label class="formlabel" >Email</label><br />
+        <input class="inputform" type="text" /><br /><br />
+
+        <label class="formlabel" >Telefonnr.</label><br />
+        <input class="inputform" type="number" /><br /><br />
+
+        <label class="formlabel" >Virksomhed</label><br />
+        <input class="inputform" type="text" /><br /><br />
+
+        <label class="formlabel" >Besked</label><br />
+        <textarea class="textareaform">
+        Skriv besked
+        </textarea> <br /> <br /> <br/>
+
+        <input class="inputform" type="submit" value="Send besked" />
+
+    </form>
+    </div>
+
+
+
+    
+</body>
+</html>
