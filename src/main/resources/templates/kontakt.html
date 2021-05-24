@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
     <title>Phonerep</title>
 </head>
 <body>
@@ -16,11 +17,12 @@
             <img th:src="@{img/lillelogo.png}" src="../static/img/lillelogo.png" alt="">
         </div>
 
-        <div class="grid grid-cols-4 gap-2 place-items-center">
+        <div class="grid grid-cols-5 gap-2 place-items-center">
             <div>Reparationer</div>
             <div>Butikker</div>
             <div>Tilbehør</div>
             <div>Erhverv</div>
+            <div>Kontakt os</div>
           </div>
 
           <div class="grid grid-cols-3 gap-2 place-items-center">  
@@ -31,23 +33,26 @@
 
     </div>
 
-    <h1 style="color: white; letter-spacing: 5px; padding: 10px;">Kontakt os</h1>
+    <h1 class="headertext" > Kontakt os</h1> <br/> <br/>
 
-    <form>
+    <form class="form" >
 
-        <label for="name">Navn</label><br />
-        <input type="name" id="name" name="name" /><br /><br />
+        <label class="formlabel" >Navn</label><br />
+        <input class="inputform" type="text" /><br /><br />
 
-        <label for="length">Længde</label><br />
-        <input type="number" id="length" name="length" /><br /><br />
+        <label class="formlabel" >Email</label><br />
+        <input class="inputform" type="text" /><br /><br />
 
-        <label for="age">Aldersgrænse</label><br />
-        <input type="number" id="age" name="age" /><br /><br />
+        <label class="formlabel" >Telefonnr.</label><br />
+        <input class="inputform" type="number" /><br /><br />
 
-        <label for="actor">Skuespiller</label><br />
-        <input type="text" id="actor" name="actor" /><br /><br />
+        <label class="formlabel" >Besked</label><br />
+        <textarea class="textareaform">
+        Skriv besked
+        </textarea> <br /> <br /> <br/>
 
-        <input type="submit" value="Opret film" />
+        <input class="inputform" type="submit" value="Send besked" />
+
     </form>
 
 

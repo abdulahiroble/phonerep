@@ -23,4 +23,14 @@ public class HomeController {
     public String admin() {
         return "admin";
     }
+
+    @GetMapping("/kontakt")
+    public String kontakt() {
+        return "kontakt";
+    }
+
+    @GetMapping("erhverv")
+    public String erhvervh() {
+        return "erhverv";
+    }
 }
