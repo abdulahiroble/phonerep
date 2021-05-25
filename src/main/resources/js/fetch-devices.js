@@ -9,6 +9,8 @@ dropdown.selectedIndex = 0;
 
 const url = 'http://localhost:8080/devices';
 
+console.log("hello")
+
 fetch(url)
     .then(
         function (response) {
