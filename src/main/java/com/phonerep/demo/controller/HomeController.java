@@ -38,5 +38,10 @@ public class HomeController {
     public String butikker() {
         return "butikker";
     }
+
+    @GetMapping("updatepricelist")
+    public String updatepricelist() {
+        return "updatepricelist";
+    }
 }
 

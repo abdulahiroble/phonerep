@@ -14,8 +14,16 @@ public class Device {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int deviceid;
 
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "code")
     private String code;
+
+    public Device(String model) {
+        this.model = model;
+    }
 
     public Device() {
     }
