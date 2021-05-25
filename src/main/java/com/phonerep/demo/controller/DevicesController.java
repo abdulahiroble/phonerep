@@ -14,4 +14,10 @@ public class DevicesController {
         return "iphone5";
     }
 
+    @GetMapping("/repair")
+    public String repair() {
+
+        return "repair";
+    }
+
 }
