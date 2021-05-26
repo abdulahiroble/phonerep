@@ -24,11 +24,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/resources/**"); // #3
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/resources/**").permitAll().antMatchers("/admin").hasRole("ADMIN")
+        String[] resources = new String[] { "/resources", "/home", "/pictureCheckCode", "/include/**", "/css/**",
+                "/icons/**", "/images/**", "/js/**", "/layer/**" };
+
+        http.authorizeRequests().antMatchers(resources).permitAll().antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/createbookingjs").hasRole("ADMIN").antMatchers("/createmovie").hasRole("ADMIN")
                 .antMatchers("/createemployee").hasRole("ADMIN").antMatchers("/user").hasAnyRole("ADMIN", "USER")
                 .antMatchers("/**").permitAll().antMatchers("/").permitAll().and().formLogin();
