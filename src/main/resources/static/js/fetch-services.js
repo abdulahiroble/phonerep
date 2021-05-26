@@ -2,12 +2,12 @@ let dropdown = document.getElementById('standard-select');
 dropdown.length = 0;
 
 let defaultOption = document.createElement('option');
-defaultOption.text = 'Vælg model';
+defaultOption.text = 'Vælg service';
 
 dropdown.add(defaultOption);
 dropdown.selectedIndex = 0;
 
-const url = 'http://localhost:8080/devices';
+const url = 'http://localhost:8080/services';
 
 console.log("hello")
 
@@ -28,14 +28,12 @@ fetch(url)
 
                 for (let i = 0; i < data.length; i++) {
                     option = document.createElement('option');
-                    option.text = data[i].model;
-                    option.value = data[i].deviceid;
+                    option.text = data[i].servicename;
+                    option.value = data[i].serviceid;
                     // dropdown.add(option);
                     parseInt(dropdown.add(option));
                     console.log("test");
                 }
-
-                // option.value = data.genreid;
             });
         }
     )

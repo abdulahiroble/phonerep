@@ -3,6 +3,7 @@ package com.phonerep.demo.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -37,9 +38,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 "/icons/**", "/images/**", "/js/**", "/layer/**" };
 
         http.authorizeRequests().antMatchers(resources).permitAll().antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers("/createbookingjs").hasRole("ADMIN").antMatchers("/createmovie").hasRole("ADMIN")
-                .antMatchers("/createemployee").hasRole("ADMIN").antMatchers("/user").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/**").permitAll().antMatchers("/").permitAll().and().formLogin();
+                .antMatchers(HttpMethod.POST, "/bestil-tid").hasRole("ADMIN").antMatchers("/createbookingjs")
+                .hasRole("ADMIN").antMatchers("/createmovie").hasRole("ADMIN").antMatchers("/createemployee")
+                .hasRole("ADMIN").antMatchers("/user").hasAnyRole("ADMIN", "USER").antMatchers("/**").permitAll()
+                .antMatchers("/").permitAll().and().formLogin();
 
     }
 
