@@ -38,7 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 "/icons/**", "/images/**", "/js/**", "/layer/**" };
 
         http.authorizeRequests().antMatchers(resources).permitAll().antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/bestil-tid").hasRole("ADMIN").antMatchers("/createbookingjs")
+                .antMatchers(HttpMethod.POST, "/newbookingjs").hasRole("ADMIN").antMatchers("/bestil-tid")
                 .hasRole("ADMIN").antMatchers("/createmovie").hasRole("ADMIN").antMatchers("/createemployee")
                 .hasRole("ADMIN").antMatchers("/user").hasAnyRole("ADMIN", "USER").antMatchers("/**").permitAll()
                 .antMatchers("/").permitAll().and().formLogin();
