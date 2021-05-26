@@ -15,7 +15,9 @@ public class Shop {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int shopid;
 
+    @Column(name = "shopname")
     private String shopname;
+
     private String address;
     private int postal;
     private String city;
@@ -28,6 +30,10 @@ public class Shop {
         this.postal = postal;
         this.city = city;
         this.time = time;
+    }
+
+    public Shop(String shopname) {
+        this.shopname = shopname;
     }
 
     public Shop() {

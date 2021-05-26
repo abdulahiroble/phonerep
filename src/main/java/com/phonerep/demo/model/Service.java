@@ -13,7 +13,13 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int serviceid;
 
+    @Column(name="servicename")
     private String servicename;
+
+
+    public Service(String servicename) {
+        this.servicename = servicename;
+    }
 
     public Service() {
     }

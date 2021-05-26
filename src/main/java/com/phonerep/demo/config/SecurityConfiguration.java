@@ -1,11 +1,9 @@
 package com.phonerep.demo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -23,17 +21,43 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService);
     }
 
+    // @Override
+    // protected void configure(HttpSecurity http) throws Exception {
+    //     http.authorizeRequests()
+    //     .antMatchers( "/css/**").permitAll()
+    //     .antMatchers( "/img/**").permitAll()
+
+
+    //                 .antMatchers("/admin").hasRole("ADMIN")
+    //             .antMatchers("/user").hasAnyRole("ADMIN", "USER")
+    //             .antMatchers("/**").permitAll()
+
+    //             .and().formLogin().permitAll()
+
+    //     ;
+
+    //     http.csrf().disable();
+
+    // }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/admin").hasRole("ADMIN").antMatchers("/updatepricelist").hasRole("ADMIN")
-                .antMatchers("/createmovie").hasRole("ADMIN").antMatchers("/createemployee").hasRole("ADMIN")
-                .antMatchers("/user").hasAnyRole("ADMIN", "USER").antMatchers("/**").permitAll().antMatchers("/")
-                .permitAll().and().formLogin();
+        http.authorizeRequests()
+                .antMatchers("/admin").hasRole("ADMIN")
+               // .antMatchers("/createmoviejs").hasRole("ADMIN")
+               // .antMatchers("/createmovie").hasRole("ADMIN")
+               // .antMatchers("/createemployee").hasRole("ADMIN")
+                // .antMatchers("/user").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/**").permitAll()
+                .antMatchers("/").permitAll()
+                .and().formLogin();
+
 
     }
+
 
     @Bean
     public PasswordEncoder getPasswordEncoder() {

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://java.sun.com/jsf/composite">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Phonerep</title>
+</head>
+<body>
+
+    <div class="flex flex-row justify-between p-5 uppercase text-lg">
+        
+        <div class="grid grid-cols-1 place-items-center w-64">
+            <img th:src="@{img/lillelogo.png}" src="../static/img/lillelogo.png" alt="">
+        </div>
+
+        <div class="grid grid-cols-4 gap-2 place-items-center">
+            <div>Admin</div>
+            <div>Opdater Priser</div>
+            <div>Bookinger</div>
+            <div>Hjem</div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 place-items-center">  
+            <div>Bestil tid</div>
+            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 11.839844 2.988281 C 11.070313 2.925781 10.214844 3.148438 9.425781 3.703125 C 8.730469 4.1875 7.230469 5.378906 5.828125 6.726563 C 5.128906 7.398438 4.460938 8.097656 3.945313 8.785156 C 3.425781 9.472656 2.972656 10.101563 3 11.015625 C 3.027344 11.835938 3.109375 14.261719 4.855469 17.980469 C 6.601563 21.695313 9.988281 26.792969 16.59375 33.402344 C 23.203125 40.011719 28.300781 43.398438 32.015625 45.144531 C 35.730469 46.890625 38.160156 46.972656 38.980469 47 C 39.890625 47.027344 40.519531 46.574219 41.207031 46.054688 C 41.894531 45.535156 42.59375 44.871094 43.265625 44.171875 C 44.609375 42.769531 45.800781 41.269531 46.285156 40.574219 C 47.390625 39 47.207031 37.140625 45.976563 36.277344 C 45.203125 35.734375 38.089844 31 37.019531 30.34375 C 35.933594 29.679688 34.683594 29.980469 33.566406 30.570313 C 32.6875 31.035156 30.308594 32.398438 29.628906 32.789063 C 29.117188 32.464844 27.175781 31.171875 23 26.996094 C 18.820313 22.820313 17.53125 20.878906 17.207031 20.367188 C 17.597656 19.6875 18.957031 17.320313 19.425781 16.425781 C 20.011719 15.3125 20.339844 14.050781 19.640625 12.957031 C 19.347656 12.492188 18.015625 10.464844 16.671875 8.429688 C 15.324219 6.394531 14.046875 4.464844 13.714844 4.003906 L 13.714844 4 C 13.28125 3.402344 12.605469 3.050781 11.839844 2.988281 Z M 11.65625 5.03125 C 11.929688 5.066406 12.09375 5.175781 12.09375 5.175781 C 12.253906 5.398438 13.65625 7.5 15 9.53125 C 16.34375 11.566406 17.714844 13.652344 17.953125 14.03125 C 17.992188 14.089844 18.046875 14.753906 17.65625 15.492188 L 17.65625 15.496094 C 17.214844 16.335938 15.15625 19.933594 15.15625 19.933594 L 14.871094 20.4375 L 15.164063 20.9375 C 15.164063 20.9375 16.699219 23.527344 21.582031 28.410156 C 26.46875 33.292969 29.058594 34.832031 29.058594 34.832031 L 29.558594 35.125 L 30.0625 34.839844 C 30.0625 34.839844 33.652344 32.785156 34.5 32.339844 C 35.238281 31.953125 35.902344 32.003906 35.980469 32.050781 C 36.671875 32.476563 44.355469 37.582031 44.828125 37.914063 C 44.84375 37.925781 45.261719 38.558594 44.652344 39.425781 L 44.648438 39.425781 C 44.28125 39.953125 43.078125 41.480469 41.824219 42.785156 C 41.195313 43.4375 40.550781 44.046875 40.003906 44.457031 C 39.457031 44.867188 38.96875 44.996094 39.046875 45 C 38.195313 44.972656 36.316406 44.953125 32.867188 43.332031 C 29.417969 41.714844 24.496094 38.476563 18.007813 31.984375 C 11.523438 25.5 8.285156 20.578125 6.664063 17.125 C 5.046875 13.675781 5.027344 11.796875 5 10.949219 C 5.003906 11.027344 5.132813 10.535156 5.542969 9.988281 C 5.953125 9.441406 6.558594 8.792969 7.210938 8.164063 C 8.519531 6.910156 10.042969 5.707031 10.570313 5.339844 L 10.570313 5.34375 C 11.003906 5.039063 11.382813 5 11.65625 5.03125 Z"/></svg>
+            <div>71 71 71 02</div>
+        </div>  
+
+    </div>
+
+    <h1 class="headertext" > Bestil Tid</h1> <br/> <br/>
+
+    <h2 style="font-size: 25px; text-align: center">Sådan gør du</h2> </br>
+
+    <div style="text-align: center;">SÅDAN GØR DU
+        Vælg service, afdeling og dato for den ønskede reparation. Vælg ønsket tidspunkt for reparation. Udfyld de nødvendige oplysninger og tryk færdig. Herefter vil du modtage en bekræftelsesmail for din reservation.
+
+        Vi bruger kun reservedele af original kvalitet, når din telefon bliver repareret hos os. Derfor tilbyder vi dig 2 års garanti på de dele, der er skiftet hos os. Det er din garanti for, at din telefon lever længere.
+        Ofte kan vi reparerer din telefon, mens du venter. Tag en kop kaffe eller få en snak med vores dygtige medarbejdere, mens vi foretager reparation af din iPhone eller Smartphone.</div> <br/> <br/>
+
+
+
+
+
+
+            <form class="form" enctype='application/x-www-form-urlencoded' method="post" id="bookingform" >
+
+                <label class="formlabel" > Service</label>
+                <select name="servicename" id="standard-select" class="inputform"> </select> <br /><br />
+
+                <label class="formlabel" > Afdeling</label>
+                <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br />
+
+                <label class="formlabel" >Dato</label><br />
+                <input class="inputform" name="date" type="date" /><br /><br />
+
+                <label class="formlabel" >Tidspunkt</label><br />
+                <input class="inputform" name="time" type="time" /><br /><br />
+
+                <label class="formlabel" >Fornavn</label><br />
+                <input class="inputform" name="firstname" type="text" /><br /><br />
+
+                <label class="formlabel" >Efternavn</label><br />
+                <input class="inputform" name="lastname" type="text" /><br /><br />
+
+                <label class="formlabel" >Email</label><br />
+                <input class="inputform" name="email" type="text" /><br /><br />
+
+                <label class="formlabel" >Telefonnr.</label><br />
+                <input class="inputform" name="phone" type="number" /><br /><br />
+
+                <label class="formlabel" > Model</label>
+                <select name="model" id="standard-select3" class="inputform" > </select> <br /><br />
+
+                <label class="formlabel" > Reparation</label>
+                <select name="repname" id="standard-select4" class="inputform" > </select>  <br /><br />
+
+                <label class="formlabel" >Bemærkninger</label><br />
+                <textarea class="textareaform">
+        Skriv besked
+        </textarea> <br /> <br /> <br/>
+
+                <input class="inputform" type="submit" value="Bestil tid" />
+
+            </form>
+
+
+
+
+    </div>
+
+    <br /><br />
+
+
+   <!-- <script src="../js/fetch-devices.js" th:href="@{/js/fetch-devices.js}"></script> -->
+
+   <script >
+    let dropdown = document.getElementById('standard-select');
+dropdown.length = 0;
+
+let defaultOption = document.createElement('option');
+defaultOption.text = 'Vælg service';
+
+dropdown.add(defaultOption);
+dropdown.selectedIndex = 0;
+
+const url = 'http://localhost:8080/services';
+
+console.log("hello")
+
+fetch(url)
+.then(
+    function (response) {
+        if (response.status !== 200) {
+            console.warn('Looks like there was a problem. Status Code: ' +
+                response.status);
+            return;
+        }
+
+        // Examine the text in the response  
+        response.json().then(function (data) {
+            let option;
+
+            console.log(data);
+
+            for (let i = 0; i < data.length; i++) {
+                option = document.createElement('option');
+                option.text = data[i].servicename;
+                option.value = data[i].serviceid;
+                // dropdown.add(option);
+                parseInt(dropdown.add(option));
+                console.log("test");
+            }
+        });
+    }
+)
+.catch(function (err) {
+    console.error('Fetch Error -', err);
+});
+
+</script>
+
+    <script >
+        let dropdown2 = document.getElementById('standard-select2');
+        dropdown2.length = 0;
+
+        let defaultOption2 = document.createElement('option');
+        defaultOption2.text = 'Vælg afdeling';
+
+        dropdown2.add(defaultOption);
+        dropdown2.selectedIndex = 0;
+
+        const url2 = 'http://localhost:8080/shops';
+
+        console.log("hello")
+
+        fetch(url2)
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.warn('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        let option2;
+
+                        console.log(data);
+
+                        for (let i = 0; i < data.length; i++) {
+                            option2 = document.createElement('option');
+                            option2.text = data[i].shopname;
+                            option2.value = data[i].shopid;
+                            // dropdown.add(option);
+                            parseInt(dropdown2.add(option2));
+                            console.log("test");
+                        }
+                    });
+                }
+            )
+            .catch(function (err) {
+                console.error('Fetch Error -', err);
+            });
+
+    </script>
+
+
+    <script >
+        let dropdown3 = document.getElementById('standard-select3');
+        dropdown3.length = 0;
+
+        let defaultOption3 = document.createElement('option');
+        defaultOption3.text = 'Vælg model';
+
+        dropdown3.add(defaultOption);
+        dropdown3.selectedIndex = 0;
+
+        const url3 = 'http://localhost:8080/devices';
+
+        console.log("hello")
+
+        fetch(url3)
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.warn('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        let option3;
+
+                        console.log(data);
+
+                        for (let i = 0; i < data.length; i++) {
+                            option3 = document.createElement('option');
+                            option3.text = data[i].model;
+                            option3.value = data[i].deviceid;
+                            // dropdown.add(option);
+                            parseInt(dropdown3.add(option3));
+                            console.log("test");
+                        }
+                    });
+                }
+            )
+            .catch(function (err) {
+                console.error('Fetch Error -', err);
+            });
+
+    </script>
+
+    <script >
+        let dropdown4 = document.getElementById('standard-select4');
+        dropdown4.length = 0;
+
+        let defaultOption4 = document.createElement('option');
+        defaultOption4.text = 'Vælg model';
+
+        dropdown4.add(defaultOption);
+        dropdown4.selectedIndex = 0;
+
+        const url4 = 'http://localhost:8080/repairtype';
+
+        console.log("hello")
+
+        fetch(url4)
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.warn('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        let option4;
+
+                        console.log(data);
+
+                        for (let i = 0; i < data.length; i++) {
+                            option4 = document.createElement('option');
+                            option4.text = data[i].model;
+                            option4.value = data[i].deviceid;
+                            // dropdown.add(option);
+                            parseInt(dropdown4.add(option4));
+                            console.log("test");
+                        }
+                    });
+                }
+            )
+            .catch(function (err) {
+                console.error('Fetch Error -', err);
+            });
+
+    </script>
+
+
+<script>
+
+
+    const out = function (str) { console.log(str); };
+
+    const sov = (ms) => {
+        const prom = new Promise(dummyFunction => setTimeout(dummyFunction, ms));
+        return prom;
+    }
+
+    // first get our form
+    const personForm = document.getElementById("personform");
+    out(personForm);
+
+    // normal submitForm
+    function submitForm(ae) {
+        out("submit form");
+        out(personForm);
+        out(ae);
+    }
+
+    async function submitFormAsync(mouseEvent) {
+        mouseEvent.preventDefault(); //prevent form from beeing cleared when executing submit
+        // and also important. prevent action from beeing executed, meaning sending form to server (url in action=)
+
+        out("submit form async");
+        out(personForm);
+        out(mouseEvent);
+
+        const form1 = mouseEvent.currentTarget;
+        out("Form1 ="); //form1 is the object that caused the event. In this case same as personForm
+        out(form1);
+        const url = form1.action; // hvis action i jeres form header så er den her, og bliver ikke udført hvis preventDefault() er kaldt
+        out(url);
+
+        const formData = new FormData(form1);
+
+        out(formData);
+
+        out(formData.entries());
+
+        const plainFormData = Object.fromEntries(formData.entries());
+        out(plainFormData); // nu har vi object med alle data fra skærmen
+
+        try {
+            // vi gør som i artikel
+            const responseData = await postFormDataAsJson({ url, formData });
+
+            //responseData er et json object
+            // nu skal vi finde ud af hvad vi gør med svaret fra server, som jo er det nye indsatte objekt
+            console.log(responseData);
+            //window.name.minNyePerson = responseData;  det virker ikke
+            //window.name = {"json": responseData};
+            // window.localStorage.setItem("json1", { responseData }); //virker ikke , localStorage tager kun stringe i setItem (string,string)
+            // localStorage.setItem("nameKurt", "Kurt Larsen"); // window er global så vi kan nøjes med at skrive localStorage
+            localStorage.setItem("hihi", responseData.genreid);
+            // localStorage.setItem("location", responseData.location);
+            // localStorage.setItem("birthDate", responseData.birthDate);
+
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
+    //bemærk tager 1 parameter. Et object med url og formData.
+    //Betyder at rækkefølgen af url,formdata er ligegyldig, man kunne også skrive formData,url og det vil stadig virke
+    async function postFormDataAsJson({ url, formData }) {
+
+        const plainFormData = Object.fromEntries(formData.entries());
+
+        const formDataJsonString = JSON.stringify(plainFormData);
+        out(plainFormData);
+        out(formDataJsonString); // this is the string that we will send to the server
+        out("Done postformdata");
+
+        const requestOptions = {
+            'content-type': 'application/json',
+            method: 'POST',
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: formDataJsonString
+        };
+
+        //vi kunne også få vores url fra action attribut i form
+        const posturl = "http://localhost:8080/newbookingjs";
+
+        //fordi vi er indeni en function prefixed med async, så kan vi kalde fetch med await, så bliver stående til færdig.
+        //Det jeg kalder for et synkront kald
+        const responseData = await fetch(posturl, requestOptions);
+
+        out("responseData=");
+
+        out(responseData);
+
+        const responseJson = await responseData.json();
+
+        out("responseJson");
+        out(responseJson);
+        return responseJson;
+
+    }
+
+    personForm.addEventListener('submit', submitFormAsync);
+
+    // submit action blanker form ud. så prøv den her
+    const pbNewPerson = document.getElementById("pbNewPerson");
+
+    pbNewPerson.addEventListener("click", submitFormAsync);
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
