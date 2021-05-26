@@ -8,8 +8,4 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class ReservationController {
 
-    @GetMapping("/bestil")
-    public String bestil() {
-        return "bestil";
-    }
 }

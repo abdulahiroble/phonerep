@@ -3,6 +3,7 @@ package com.phonerep.demo.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -24,14 +25,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/resources/**"); // #3
+    }
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/admin").hasRole("ADMIN").antMatchers("/updatepricelist").hasRole("ADMIN")
-                .antMatchers("/createmovie").hasRole("ADMIN").antMatchers("/createemployee").hasRole("ADMIN")
-                .antMatchers("/user").hasAnyRole("ADMIN", "USER").antMatchers("/**").permitAll().antMatchers("/")
-                .permitAll().and().formLogin();
+        String[] resources = new String[] { "/resources", "/home", "/pictureCheckCode", "/include/**", "/css/**",
+                "/icons/**", "/images/**", "/js/**", "/layer/**" };
+
+        http.authorizeRequests().antMatchers(resources).permitAll().antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/newbookingjs").hasRole("ADMIN").antMatchers("/bestil-tid")
+                .hasRole("ADMIN").antMatchers("/createmovie").hasRole("ADMIN").antMatchers("/createemployee")
+                .hasRole("ADMIN").antMatchers("/user").hasAnyRole("ADMIN", "USER").antMatchers("/**").permitAll()
+                .antMatchers("/").permitAll().and().formLogin();
 
     }
 

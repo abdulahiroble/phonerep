@@ -43,5 +43,10 @@ public class HomeController {
     public String updatepricelist() {
         return "updatepricelist";
     }
-}
+
+    @GetMapping("bestil-tid")
+    public String bestiltid() {
+        return "bestil-tid";
+    }
+ }
 
