@@ -44,16 +44,13 @@
 
 
 
+            <form  action="/newbookingjs" class="form"  method="post" id="bookingform">
 
-
-
-            <form action="/newbookingjs" class="form" method="post" id="bookingform" >
-
-                <label class="formlabel" > Service</label>
+                <!-- <label class="formlabel" > Service</label>
                 <select name="servicename" id="standard-select" class="inputform"> </select> <br /><br />
 
                 <label class="formlabel" > Afdeling</label>
-                <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br />
+                <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br /> -->
 
                 <label class="formlabel" >Dato</label><br />
                 <input class="inputform" name="date" type="text" value="das" /><br /><br />
@@ -80,9 +77,8 @@
                 <select name="repname" id="standard-select4" class="inputform" > </select>  <br /><br />
 
                 <label class="formlabel" >Bemærkninger</label><br />
-                <textarea class="textareaform">
-        Skriv besked
-        </textarea> <br /> <br /> <br/>
+                <textarea class="textareaform">Skriv besked</textarea> 
+        <br /> <br /> <br/>
 
                 <input class="inputform" type="submit" value="Bestil tid" />
 
@@ -90,41 +86,18 @@
 
 
             <br><br>
-
-
-            <form action="/newbookingjs" class="form"  method="post" id="bookingform" >
-
-                <!-- <label class="formlabel" >Brand</label><br />
-
-                <input class="inputform" name="brandname" type="text" value="mas" /><br /><br /> -->
-
-                <label class="formlabel" >Dato</label><br />
-                <input class="inputform" name="date" type="text" value="das" /><br /><br />
-
-                <label class="formlabel" >Tidspunkt</label><br />
-                <input class="inputform" name="time" type="text" value="das" /><br /><br />
-
-                <input class="inputform" type="submit" value="Bestil tid" />
-
-            </form>
-
-
-
-
     </div>
 
     <br /><br />
 
-    <script src="../static/js/create-booking.js" th:href="@{/js/create-booking.js}"></script>
-
-    <script src="../js/fetch-services.js" th:href="@{/js/fetch-services.js}"></script>
+    <script src="../static/js/fetch-services.js" th:href="@{/js/fetch-services.js}"></script>
 
 
-   <script src="../js/fetch-shops.js" th:href="@{/js/fetch-shops.js}"></script>
+   <script src="../static/js/fetch-shops.js" th:href="@{/js/fetch-shops.js}"></script>
 
-   <script src="../js/fetch-devics-dropdown.js" th:href="@{/js/fetch-devics-dropdown.js}"></script>
+   <script src="../static/js/fetch-devics-dropdown.js" th:href="@{/js/fetch-devics-dropdown.js}"></script>
 
-   <script src="../js/create-booking.js" th:href="@{/js/create-booking.js}"></script>
+   <script src="../static/js/create-booking.js" th:href="@{/js/create-booking.js}"></script>
 
 </body>
 </html>
