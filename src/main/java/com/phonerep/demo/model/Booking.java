@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import javax.persistence.*;
 import java.sql.Time;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 public class Booking {
@@ -14,15 +15,22 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bookingid;
 
-    private Date date;
-    private Time time;
+    @Column(name = "date")
+    private String date;
+
+    @Column(name = "time")
+    private String time;
+
+    public Booking(String date, String time) {
+        this.date = date;
+        this.time = time;
+    }
 
     public Booking() {
 
-
     }
 
-    public Booking(int bookingid, Date date, Time time) {
+    public Booking(int bookingid, String date, String time) {
         this.bookingid = bookingid;
         this.date = date;
         this.time = time;
@@ -93,6 +101,11 @@ public class Booking {
         this.shop = shop;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingid);
+    }
+
     public int getBookingid() {
         return bookingid;
     }
@@ -101,19 +114,19 @@ public class Booking {
         this.bookingid = bookingid;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 }

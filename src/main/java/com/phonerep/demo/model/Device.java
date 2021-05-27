@@ -14,7 +14,6 @@ public class Device {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int deviceid;
 
-
     @Column(name = "model")
     private String model;
 
@@ -34,17 +33,17 @@ public class Device {
         this.code = code;
     }
 
-
     @ManyToOne
     @JoinColumn(name = "brandid")
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "brandid")
+
     private Brand brand;
 
     @ManyToOne
     @JoinColumn(name = "pricelistid")
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "pricelistid")
-    private Pricelist pricelist;
 
+    private Pricelist pricelist;
 
     public Pricelist getPricelist() {
         return pricelist;
@@ -53,7 +52,6 @@ public class Device {
     public void setPricelist(Pricelist pricelist) {
         this.pricelist = pricelist;
     }
-
 
     public Brand getBrand() {
         return brand;
@@ -78,7 +76,6 @@ public class Device {
     public void setModel(String model) {
         this.model = model;
     }
-
 
     public String getCode() {
         return code;
