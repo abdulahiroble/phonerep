@@ -6,7 +6,7 @@ const sov = (ms) => {
 }
 
 // first get our form
-const personForm = document.getElementById("bookingform");
+const personForm = document.getElementById("brandform");
 out(personForm);
 
 // normal submitForm
@@ -82,7 +82,7 @@ async function postFormDataAsJson({ url, formData }) {
     };
 
     //vi kunne også få vores url fra action attribut i form
-    const posturl = "http://localhost:8080/newbookingjs";
+    const posturl = "http://localhost:8080/brand";
 
     //fordi vi er indeni en function prefixed med async, så kan vi kalde fetch med await, så bliver stående til færdig.
     //Det jeg kalder for et synkront kald

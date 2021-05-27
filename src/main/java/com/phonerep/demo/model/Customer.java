@@ -14,14 +14,11 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerid;
 
-
-
     private String firstname;
     private String lastname;
     private String company;
     private String email;
     private String phone;
-
 
     public Customer(int customerid, String firstname, String lastname, String company, String email, String phone) {
         this.customerid = customerid;
@@ -39,7 +36,6 @@ public class Customer {
     @JoinColumn(name = "customerid")
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "customerid")
     private Set<Booking> booking = new HashSet<>();
-
 
     public int getCustomerid() {
         return customerid;
@@ -88,6 +84,5 @@ public class Customer {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
 
 }

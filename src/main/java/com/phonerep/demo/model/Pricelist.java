@@ -28,8 +28,6 @@ public class Pricelist {
         this.booking = booking;
     }
 
-
-
     @OneToMany
     @JoinColumn(name = "pricelistid")
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "bookingid")
@@ -55,8 +53,6 @@ public class Pricelist {
     public void setBooking(Set<Booking> booking) {
         this.booking = booking;
     }
-
-
 
     public int getPricelistid() {
         return pricelistid;

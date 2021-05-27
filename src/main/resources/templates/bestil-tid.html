@@ -47,7 +47,7 @@
 
 
 
-            <form class="form" enctype='application/x-www-form-urlencoded' method="post" id="bookingform" >
+            <form action="/newbookingjs" class="form" method="post" id="bookingform" >
 
                 <label class="formlabel" > Service</label>
                 <select name="servicename" id="standard-select" class="inputform"> </select> <br /><br />
@@ -56,10 +56,10 @@
                 <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br />
 
                 <label class="formlabel" >Dato</label><br />
-                <input class="inputform" name="date" type="date" /><br /><br />
+                <input class="inputform" name="date" type="text" value="das" /><br /><br />
 
                 <label class="formlabel" >Tidspunkt</label><br />
-                <input class="inputform" name="time" type="time" /><br /><br />
+                <input class="inputform" name="time" type="text" value="das" /><br /><br />
 
                 <label class="formlabel" >Fornavn</label><br />
                 <input class="inputform" name="firstname" type="text" /><br /><br />
@@ -89,11 +89,33 @@
             </form>
 
 
+            <br><br>
+
+
+            <form action="/newbookingjs" class="form"  method="post" id="bookingform" >
+
+                <!-- <label class="formlabel" >Brand</label><br />
+
+                <input class="inputform" name="brandname" type="text" value="mas" /><br /><br /> -->
+
+                <label class="formlabel" >Dato</label><br />
+                <input class="inputform" name="date" type="text" value="das" /><br /><br />
+
+                <label class="formlabel" >Tidspunkt</label><br />
+                <input class="inputform" name="time" type="text" value="das" /><br /><br />
+
+                <input class="inputform" type="submit" value="Bestil tid" />
+
+            </form>
+
+
 
 
     </div>
 
     <br /><br />
+
+    <script src="../static/js/create-booking.js" th:href="@{/js/create-booking.js}"></script>
 
     <script src="../js/fetch-services.js" th:href="@{/js/fetch-services.js}"></script>
 

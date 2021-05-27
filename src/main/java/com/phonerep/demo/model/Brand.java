@@ -14,6 +14,7 @@ public class Brand {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int brandid;
 
+    @Column(name = "brandname")
     private String brandname;
 
     public Brand(int brandid, String brandname) {
@@ -24,16 +25,11 @@ public class Brand {
     public Brand() {
     }
 
-
     @OneToMany
     @JoinColumn(name = "brandid")
     @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "deviceid")
+
     private Set<Device> device = new HashSet<>();
-
-
-
-
-
 
     public int getBrandid() {
         return brandid;
