@@ -35,7 +35,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         String[] resources = new String[] { "/resources", "/home", "/pictureCheckCode", "/include/**", "/css/**",
-                "/icons/**", "/images/**", "/js/**", "/layer/**" };
+                "/icons/**", "/images/**", "/js/**", "/layer/**", "/static/**" };
 
         http.authorizeRequests().antMatchers(resources).permitAll().antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/newbookingjs").permitAll().antMatchers("/bestil-tid").permitAll()

@@ -46,11 +46,11 @@
 
             <form  action="/newbookingjs" class="form"  method="post" id="bookingform">
 
-                <!-- <label class="formlabel" > Service</label>
-                <select name="servicename" id="standard-select" class="inputform"> </select> <br /><br />
+                <label class="formlabel" > Service</label>
+                <select name="service" id="standard-select" class="inputform"> </select> <br /><br />
 
                 <label class="formlabel" > Afdeling</label>
-                <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br /> -->
+                <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br />
 
                 <label class="formlabel" >Dato</label><br />
                 <input class="inputform" name="date" type="text" value="das" /><br /><br />
@@ -90,14 +90,13 @@
 
     <br /><br />
 
-    <script src="../static/js/fetch-services.js" th:href="@{/js/fetch-services.js}"></script>
+    <script src="../js/fetch-services.js" th:href="@{/js/fetch-services.js}"></script>
 
 
-   <script src="../static/js/fetch-shops.js" th:href="@{/js/fetch-shops.js}"></script>
+   <script src="../js/fetch-shops.js" th:href="@{/js/fetch-shops.js}"></script>
 
-   <script src="../static/js/fetch-devics-dropdown.js" th:href="@{/js/fetch-devics-dropdown.js}"></script>
 
-   <script src="../static/js/create-booking.js" th:href="@{/js/create-booking.js}"></script>
+   <script src="../js/fetch-devices" th:href="@{/js/fetch-devices}"></script>
 
 </body>
 </html>

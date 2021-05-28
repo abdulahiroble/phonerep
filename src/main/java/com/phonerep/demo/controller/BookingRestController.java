@@ -41,24 +41,24 @@ public class BookingRestController {
     @Autowired
     BrandRepository brandRepository;
 
-    // @PostMapping(value = "/newbookingjs", consumes = "application/json")
-    // @ResponseStatus(HttpStatus.CREATED)
-    // public Booking newbookingjs(@RequestBody Booking booking, Model model) {
+    @PostMapping(value = "/newbookingjs", consumes = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Booking newbookingjs(@RequestBody Booking booking, Model model) {
 
-    // // Service servicex = booking.getService();
+        Service servicex = booking.getService();
 
-    // // int y = Integer.parseInt(servicex.getServicename());
+        int y = Integer.parseInt(servicex.getServicename());
 
-    // // servicex.setServiceid(y);
+        servicex.setServiceid(y);
 
-    // // Shop shopx = booking.getShop();
+        Shop shopx = booking.getShop();
 
-    // // int x = Integer.parseInt(shopx.getShopname());
+        int x = Integer.parseInt(shopx.getShopname());
 
-    // // shopx.setShopid(x);
+        shopx.setShopid(x);
 
-    // return bookingRepository.save(booking);
-    // }
+        return bookingRepository.save(booking);
+    }
 
     @GetMapping("/bookings")
     public List<Booking> findAllServices() {
