@@ -11,10 +11,12 @@ import java.util.List;
 
 import com.phonerep.demo.model.Booking;
 import com.phonerep.demo.model.Brand;
+import com.phonerep.demo.model.Customer;
 import com.phonerep.demo.model.Service;
 import com.phonerep.demo.model.Shop;
 import com.phonerep.demo.repositories.BookingRepository;
 import com.phonerep.demo.repositories.BrandRepository;
+import com.phonerep.demo.repositories.CustomerRepository;
 import com.phonerep.demo.repositories.ServiceRepsitory;
 import com.phonerep.demo.repositories.ShopRepository;
 
@@ -41,28 +43,46 @@ public class BookingRestController {
     @Autowired
     BrandRepository brandRepository;
 
-    // @PostMapping(value = "/newbookingjs", consumes = "application/json")
-    // @ResponseStatus(HttpStatus.CREATED)
-    // public Booking newbookingjs(@RequestBody Booking booking, Model model) {
+    @Autowired
+    CustomerRepository customerRepository;
 
-    // // Service servicex = booking.getService();
+    @PostMapping("/newcustomer")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Customer newcustomer(@ModelAttribute("customer") Customer customer) {
 
-    // // int y = Integer.parseInt(servicex.getServicename());
+        System.out.println(customer);
+        return customerRepository.save(customer);
+    }
 
-    // // servicex.setServiceid(y);
+    @PostMapping(value = "/newbookingjs", consumes = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Booking newbookingjs(@RequestBody Booking booking, Model model, Customer customer) {
 
-    // // Shop shopx = booking.getShop();
+        Service servicex = booking.getService();
 
-    // // int x = Integer.parseInt(shopx.getShopname());
+        int y = Integer.parseInt(servicex.getServicename());
 
-    // // shopx.setShopid(x);
+        servicex.setServiceid(y);
 
-    // return bookingRepository.save(booking);
-    // }
+        Shop shopx = booking.getShop();
+
+        int x = Integer.parseInt(shopx.getShopname());
+
+        shopx.setShopid(x);
+
+        newcustomer(customer);
+
+        return bookingRepository.save(booking);
+    }
 
     @GetMapping("/bookings")
     public List<Booking> findAllServices() {
         return bookingRepository.findAll();
+    }
+
+    @GetMapping("/customer")
+    public List<Customer> findCustomers() {
+        return customerRepository.findAll();
     }
 
     @PostMapping("/newbookingjs")
@@ -92,13 +112,5 @@ public class BookingRestController {
         System.out.println(brand);
         return brandRepository.save(brand);
     }
-
-    // @PostMapping(value = "/brand", consumes =
-    // "application/x-www-form-urlencoded")
-    // @ResponseStatus(HttpStatus.CREATED)
-    // public Brand brand(@ModelAttribute("brand") Brand brand) {
-
-    // return brandRepository.save(brand);
-    // }
 
 }

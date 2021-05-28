@@ -1,17 +1,17 @@
-let dropdown5 = document.getElementById('standard-select3');
-dropdown5.length = 0;
+let dropdown6 = document.getElementById('standard-select5');
+dropdown6.length = 0;
 
-let defaultOption5 = document.createElement('option');
-defaultOption5.text = 'Vælg model';
+let defaultOption6 = document.createElement('option');
+defaultOption6.text = 'Vælg model';
 
-dropdown5.add(defaultOption5);
-dropdown5.selectedIndex = 0;
+dropdown6.add(defaultOption6);
+dropdown6.selectedIndex = 0;
 
-const url5 = 'http://localhost:8080/devices';
+const url6 = 'http://localhost:8080/repairtype';
 
 console.log("hello")
 
-fetch(url5)
+fetch(url6)
     .then(
         function (response) {
             if (response.status !== 200) {
@@ -28,10 +28,10 @@ fetch(url5)
 
                 for (let i = 0; i < data.length; i++) {
                     option = document.createElement('option');
-                    option.text = data[i].model;
-                    option.value = data[i].deviceid;
-                    // dropdown5.add(option);
-                    parseInt(dropdown5.add(option));
+                    option.text = data[i].repname;
+                    option.value = data[i].reptypeid;
+                    // dropdown6.add(option);
+                    parseInt(dropdown6.add(option));
                     console.log("test");
                 }
 
