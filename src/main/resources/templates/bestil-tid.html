@@ -50,13 +50,16 @@
                 <select name="service" id="standard-select" class="inputform"> </select> <br /><br />
 
                 <label class="formlabel" > Afdeling</label>
-                <select name="shopname" id="standard-select2" class="inputform" > </select> <br /><br />
+                <select name="shop" id="standard-select2" class="inputform" > </select> <br /><br />
+
+                <label class="formlabel" > Model</label>
+                <select name="device" id="standard-select3" class="inputform" > </select> <br /><br />
 
                 <label class="formlabel" >Dato</label><br />
-                <input class="inputform" name="date" type="text" value="das" /><br /><br />
+                <input class="inputform" name="date" type="date" /><br /><br />
 
                 <label class="formlabel" >Tidspunkt</label><br />
-                <input class="inputform" name="time" type="text" value="das" /><br /><br />
+                <input class="inputform" name="time" type="time" /><br /><br />
 
                 <label class="formlabel" >Fornavn</label><br />
                 <input class="inputform" name="firstname" type="text" /><br /><br />
@@ -67,14 +70,8 @@
                 <label class="formlabel" >Email</label><br />
                 <input class="inputform" name="email" type="text" /><br /><br />
 
-                <label class="formlabel" >Telefonnr.</label><br />
-                <input class="inputform" name="phone" type="number" /><br /><br />
-
-                <label class="formlabel" > Model</label>
-                <select name="model" id="standard-select3" class="inputform" > </select> <br /><br />
-
                 <label class="formlabel" > Reparation</label>
-                <select name="repname" id="standard-select4" class="inputform" > </select>  <br /><br />
+                <select name="repair" id="standard-select5" class="inputform" > </select>  <br /><br />
 
                 <label class="formlabel" >Bemærkninger</label><br />
                 <textarea class="textareaform">Skriv besked</textarea> 
@@ -96,7 +93,9 @@
    <script src="../js/fetch-shops.js" th:href="@{/js/fetch-shops.js}"></script>
 
 
-   <script src="../js/fetch-devices" th:href="@{/js/fetch-devices}"></script>
+   <script src="../js/fetch-devices.js" th:href="@{/js/fetch-devices.js}"></script>
+
+   <script src="../js/repairtype-dropdown.js" th:href="@{/js/repairtype-dropdown.js}"></script>
 
 </body>
 </html>
