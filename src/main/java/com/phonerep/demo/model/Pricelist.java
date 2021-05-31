@@ -16,12 +16,19 @@ public class Pricelist {
     private int pricelistid;
 
     private int repprice;
-    private Time reptime;
+    private String reptime;
 
-    public Pricelist() {
+    public Pricelist(int pricelistid, int repprice, String reptime) {
+        this.pricelistid = pricelistid;
+        this.repprice = repprice;
+        this.reptime = reptime;
     }
 
-    public Pricelist(int pricelistid, int repprice, Time reptime, Set<Booking> booking) {
+    public Pricelist() {
+
+    }
+
+    public Pricelist(int pricelistid, int repprice, String reptime, Set<Booking> booking) {
         this.pricelistid = pricelistid;
         this.repprice = repprice;
         this.reptime = reptime;
@@ -70,11 +77,11 @@ public class Pricelist {
         this.repprice = repprice;
     }
 
-    public Time getReptime() {
+    public String getReptime() {
         return reptime;
     }
 
-    public void setReptime(Time reptime) {
+    public void setReptime(String reptime) {
         this.reptime = reptime;
     }
 }

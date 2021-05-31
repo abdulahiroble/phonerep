@@ -12,8 +12,6 @@ fetch(url)
             // Examine the text in the response  
             response.json().then(function (data) {
 
-                console.log(data);
-
                 var table = document.createElement("table"), row, cellA, cellB, cellC, cellD, header
                 document.getElementById("demoA").appendChild(table);
 
@@ -22,6 +20,7 @@ fetch(url)
                     row = document.createElement("tr");
                     header = document.createElement("th");
                     cellA = document.createElement("td");
+                    cellB = document.createElement("td");
 
                     // (C3) KEY & VALUE
                     cellA.innerHTML = data[key].repname;
