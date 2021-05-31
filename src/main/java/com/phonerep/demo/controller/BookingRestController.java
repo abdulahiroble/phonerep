@@ -12,11 +12,13 @@ import java.util.List;
 import com.phonerep.demo.model.Booking;
 import com.phonerep.demo.model.Brand;
 import com.phonerep.demo.model.Customer;
+import com.phonerep.demo.model.Pricelist;
 import com.phonerep.demo.model.Service;
 import com.phonerep.demo.model.Shop;
 import com.phonerep.demo.repositories.BookingRepository;
 import com.phonerep.demo.repositories.BrandRepository;
 import com.phonerep.demo.repositories.CustomerRepository;
+import com.phonerep.demo.repositories.PricelistRepository;
 import com.phonerep.demo.repositories.ServiceRepsitory;
 import com.phonerep.demo.repositories.ShopRepository;
 
@@ -33,6 +35,9 @@ public class BookingRestController {
 
     @Autowired
     BookingRepository bookingRepository;
+
+    @Autowired
+    PricelistRepository pricelistRepository;
 
     @Autowired
     ServiceRepsitory serviceRepsitory;
@@ -78,6 +83,11 @@ public class BookingRestController {
     @GetMapping("/bookings")
     public List<Booking> findAllServices() {
         return bookingRepository.findAll();
+    }
+
+    @GetMapping("/pricelist")
+    public List<Pricelist> findPricelists() {
+        return pricelistRepository.findAll();
     }
 
     @GetMapping("/customer")
