@@ -21,10 +21,13 @@ import com.phonerep.demo.repositories.CustomerRepository;
 import com.phonerep.demo.repositories.PricelistRepository;
 import com.phonerep.demo.repositories.ServiceRepsitory;
 import com.phonerep.demo.repositories.ShopRepository;
+import com.phonerep.demo.service.PriceListService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import com.phonerep.demo.model.Pricelist;
+import org.springframework.data.domain.Page;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -50,6 +53,9 @@ public class BookingRestController {
 
     @Autowired
     CustomerRepository customerRepository;
+
+    @Autowired
+    private PriceListService priceListService;
 
     @PostMapping("/newcustomer")
     @ResponseStatus(HttpStatus.CREATED)
@@ -121,6 +127,14 @@ public class BookingRestController {
 
         System.out.println(brand);
         return brandRepository.save(brand);
+    }
+
+    @PostMapping("/newpricelist")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Pricelist newbrand(@ModelAttribute("pricelist") Pricelist pricelist) {
+
+        System.out.println(pricelist);
+        return pricelistRepository.save(pricelist);
     }
 
 }

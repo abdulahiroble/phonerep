@@ -20,17 +20,23 @@ async function fetchAll() {
         cellA = document.createElement("td");
         cellB = document.createElement("td");
         cellC = document.createElement("td");
+        cellD = document.createElement("td")
 
         // (C3) KEY & VALUE
         cellA.innerHTML = results[0][i].repname
         cellB.innerHTML = results[1][i].reptime
         cellC.innerHTML = `${results[1][i].repprice} kr`
+        cellD.innerHTML = `
+                                <a href="pricelist/{${results[1][i].pricelistid}}" class="btn btn-primary">Update</a> 
+                                <a th:href="#" class="btn btn-danger">Delete</a>
+                            `
 
         // (C4) ATTACH ROW & CELLS
         table.appendChild(row).style.width = "500px"
         row.appendChild(cellA).style.width = "500px"
         row.appendChild(cellB).style.width = "500px"
         row.appendChild(cellC).style.width = "500px"
+        row.appendChild(cellD).style.width = "500px"
     }
 }
 
