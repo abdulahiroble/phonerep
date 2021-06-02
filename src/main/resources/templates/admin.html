@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://java.sun.com/jsf/composite">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +48,7 @@
 
             <div class="text-7xl font-bold uppercase mb-3">Reparationer</div>
 
-            <div class="flex flex-col font-bold text-3xl">
+            <!-- <div class="flex flex-col font-bold text-3xl">
                 <label class="mb-3">Vælg enhed</label>
                 <select name="device" id="standard-select3" class="text-white font-bold" style="background-color: #8DC63F; padding: 10px;"> </select> <br /><br />
             </div>
@@ -63,14 +63,43 @@
                 <div>
                     pris
                 </div>
+                <div>
+                    handlinger
+                </div>
             </div>
             <table id="demoB"  class="table table-bordered">
-    
+                
+            </table> -->
+
+            <br><br>
+
+            <table border="1" class="table table-striped table-responsive-md">
+                <thead>
+                    <tr>
+                        <th>
+                           Titel</a>
+                        </th>
+                        <th>
+                           Længde</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="movie : ${listMovie}">
+                      <td th:text="${movie.repprice}"></td>
+                      <td th:text="${movie.reptime}"></td>
+                        <td>
+                            <a th:href="#">Update</a>
+                            <a th:href="#" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
     
         </div>
         
-    
+        
+     
 
     </div>
 
