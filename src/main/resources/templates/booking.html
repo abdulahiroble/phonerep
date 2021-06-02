@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <div class="flex flex-row justify-between uppercase text-lg mb-10 p-3">
+    <div class="flex flex-row justify-between text-lg mb-10 p-3">
         
         <div class="grid grid-cols-1 place-items-center w-64">
             <img th:src="@{img/lillelogo.png}" src="../static/img/lillelogo.png" alt="">
@@ -37,31 +37,29 @@
 
     <div class="flex">
 
-        <div class="text-white uppercase h-screen p-5 text-3xl font-bold justify-between" style="background-color: #8DC63F;">
-            <div class="grid grid-row-3 gap-12 mt-48">
-                <div class="">enheder</div>
-                <div class=""><a href="/booking" class="text-white no-underline">Booking</a></div>
+        <div class="text-white h-screen p-5 text-3xl font-bold justify-between" style="background-color: #8DC63F;">
+            <div class="grid grid-row-3 gap-12 mt-48 uppercase">
+                <div class=""><a href="/admin" class="text-white no-underline">enheder</a></div>
+                <div class="">booking</div>
             </div>
         </div>    
 
         <div class="px-5 ">
 
-            <div class="text-7xl font-bold uppercase mb-3">Reparationer</div>
+            <div class="text-7xl font-bold mb-3 uppercase">Bookinger</div>
 
-            <div class="flex flex-col font-bold text-3xl">
-                <label class="mb-3">Vælg enhed</label>
-                <select name="device" id="standard-select3" class="text-white font-bold" style="background-color: #8DC63F; padding: 10px;"> </select> <br /><br />
-            </div>
-
-            <div style="display: flex; flex-direction: row; justify-content: space-around; background-color: #9BBF26;" class="mt-20 border-2 bg-green-300 text-white uppercase text-xl">
+            <div style="display: flex; flex-direction: row; justify-content: space-around; background-color: #9BBF26;" class="mt-20 border-2 bg-green-300 text-white text-xl">
                 <div class="flex flex-start">
-                    Reparation
+                    Navn
                 </div>
                 <div>
-                    tid
+                    Tidspunkt
                 </div>
                 <div>
-                    pris
+                    Model
+                </div>
+                <div>
+                    Reparationstype
                 </div>
             </div>
             <table id="demoB"  class="table table-bordered">
@@ -76,10 +74,7 @@
 
 
 
-    <script src="../js/repairtype.js"></script>
-        
-    <script src="../js/repairprice.js"></script>
-    <script src="../js/fetch-devices.js" th:href="@{/js/fetch-devices.js}"></script>
+    <script src="../js/fetch-bookings.js" th:href="@{/js/fetch-bookings.js}"></script>
         
 </body>
 </html>

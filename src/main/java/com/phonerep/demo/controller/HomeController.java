@@ -24,6 +24,11 @@ public class HomeController {
         return "admin";
     }
 
+    @GetMapping("/booking")
+    public String booking() {
+        return "booking";
+    }
+
     @GetMapping("/kontakt")
     public String kontakt() {
         return "kontakt";
@@ -48,5 +53,4 @@ public class HomeController {
     public String bestiltid() {
         return "bestil-tid";
     }
- }
-
+}
