@@ -97,8 +97,8 @@ public class HomeController {
         return showMovieList(1, movie);
     }
 
-    @GetMapping("/movieFormUpdate/{pricelistid}")
-    public String movieFormUpdate(@PathVariable(value = "pricelistid") int pricelistid, Model model) {
+    @GetMapping("/pricelistUpdate/{pricelistid}")
+    public String pricelistUpdate(@PathVariable(value = "pricelistid") int pricelistid, Model model) {
 
         try {
             Pricelist pricelist = priceListService.getPriceListById(pricelistid);

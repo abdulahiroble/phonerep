@@ -26,10 +26,7 @@ async function fetchAll() {
         cellA.innerHTML = results[0][i].repname
         cellB.innerHTML = results[1][i].reptime
         cellC.innerHTML = `${results[1][i].repprice} kr`
-        cellD.innerHTML = `
-                                <a href="pricelist/{${results[1][i].pricelistid}}" class="btn btn-primary">Update</a> 
-                                <a th:href="#" class="btn btn-danger">Delete</a>
-                            `
+        cellD.innerHTML = `<a href="http://localhost:8080/pricelistUpdate/${results[1][i].pricelistid}" class="btn btn-primary">Update</a>`
 
         // (C4) ATTACH ROW & CELLS
         table.appendChild(row).style.width = "500px"
